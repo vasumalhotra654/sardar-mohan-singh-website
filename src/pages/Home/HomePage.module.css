@@ -1,0 +1,318 @@
+/* ===========================
+   HOME PAGE STYLES
+   =========================== */
+
+/* ---- Main wrapper ---- */
+.main {
+  flex: 1;
+}
+
+/* ---- HERO / BANNER ---- */
+.hero {
+  background-color: var(--color-primary);
+  color: var(--color-highlight);
+  padding: 4rem 1.5rem 3.5rem;
+  text-align: center;
+}
+
+.hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.hero__eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-primary-light);
+  margin-bottom: 0.7rem;
+}
+
+.hero__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 6vw, 3.6rem);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--color-highlight);
+  line-height: 1.05;
+  margin-bottom: 0.8rem;
+}
+
+.hero__subtitle {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(211, 219, 117, 0.55);
+}
+
+/* ---- Intro section ---- */
+.intro {
+  padding: 3.5rem 1.5rem 3rem;
+  background: var(--color-bg-page);
+}
+
+.intro__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.intro__portrait {
+  position: sticky;
+  top: 80px;
+}
+
+.intro__body {}
+
+.intro__lead {
+  font-family: var(--font-body);
+  font-size: 1.0rem;
+  line-height: 1.82;
+  color: var(--color-text-body);
+  margin-bottom: 1.25rem;
+}
+
+.intro__lead:last-of-type {
+  margin-bottom: 0;
+}
+
+.intro__refNote {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ---- Quote banner ---- */
+.quoteBanner {
+  background-color: var(--color-bg-quote);
+  border-left: 4px solid var(--color-highlight);
+  padding: 2.5rem 3rem;
+  margin: 0;
+}
+
+.quoteBanner__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.quoteBanner__text {
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  font-style: italic;
+  color: var(--color-primary-dark);
+  line-height: 1.72;
+  margin-bottom: 0.85rem;
+}
+
+.quoteBanner__cite {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-primary-mid);
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+/* ---- Divider ---- */
+.sectionDivider {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 0;
+}
+
+/* ---- Generic section ---- */
+.section {
+  padding: 3.5rem 1.5rem;
+  background: var(--color-bg-page);
+}
+
+.sectionAlt {
+  background: var(--color-bg-section);
+}
+
+.section__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section__heading {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-highlight);
+  display: inline-block;
+}
+
+/* ---- Body copy (full-width text, above images) ---- */
+.body {
+  font-family: var(--font-body);
+  font-size: 0.97rem;
+  line-height: 1.85;
+  color: var(--color-text-body);
+  margin-bottom: 2.5rem;
+}
+
+.body p {
+  margin-bottom: 1.2rem;
+}
+
+.body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ====================================================
+   IMAGE ROWS
+   All images sit BELOW their section's text in a
+   horizontal row. Three variants cover 2, 3 and 4 images.
+   ==================================================== */
+
+/* Shared row base */
+.imageRow2,
+.imageRow3,
+.imageRow4,
+.imageRowFull {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  align-items: start;
+}
+
+/* 2 images — equal halves */
+.imageRow2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* 3 images — equal thirds */
+.imageRow3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* 4 images — equal quarters */
+.imageRow4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Single / full-width image */
+.imageRowFull {
+  grid-template-columns: 1fr;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---- Inline ref superscripts ---- */
+.refNum {
+  font-size: 0.68rem;
+  vertical-align: super;
+  color: var(--color-accent);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  line-height: 0;
+  margin: 0 0.06em;
+  text-decoration: none;
+  border-bottom: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.refNum:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+/* ---- Info / note boxes ---- */
+.infoBox {
+  background: rgba(62, 67, 47, 0.05);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 1rem 1.25rem;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--color-text-body);
+}
+
+.infoBox a {
+  word-break: break-all;
+}
+
+/* ===========================
+   RESPONSIVE
+   =========================== */
+
+@media (max-width: 880px) {
+  /* Intro portrait stacks above text */
+  .intro__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .intro__portrait {
+    position: static;
+    max-width: 220px;
+    margin: 0 auto 1.5rem;
+  }
+
+  /* 4-col → 2-col on medium screens */
+  .imageRow4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 2.5rem 1rem 2.25rem;
+  }
+
+  .hero__title {
+    font-size: 2rem;
+    letter-spacing: 0.04em;
+  }
+
+  .quoteBanner {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .quoteBanner__text {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .section__heading {
+    font-size: 1.5rem;
+  }
+
+  /* 2-col → 1-col on small screens */
+  .imageRow2,
+  .imageRow3,
+  .imageRow4 {
+    grid-template-columns: 1fr;
+  }
+
+  .infoBox {
+    font-size: 0.82rem;
+    padding: 0.85rem 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero__title {
+    font-size: 1.7rem;
+  }
+
+  .section__heading {
+    font-size: 1.35rem;
+  }
+}

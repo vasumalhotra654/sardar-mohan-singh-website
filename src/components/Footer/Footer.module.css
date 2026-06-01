@@ -1,0 +1,29 @@
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-primary-light);
+  text-align: center;
+  padding: 2rem 1.5rem;
+  margin-top: auto;
+}
+
+.footer__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer__text {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--color-primary-light);
+}
+
+.footer__link {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+.footer__link:hover {
+  color: #fff;
+  text-decoration: underline;
+}

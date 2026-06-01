@@ -1,0 +1,41 @@
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.imageSection__img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 2px;
+  background-color: var(--color-border);
+}
+
+.imageSection__img--rounded {
+  border-radius: 4px;
+}
+
+.imageSection__caption {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  font-style: italic;
+  color: var(--color-text-muted);
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 0.5rem;
+  width: 100%;
+}
+
+/* Skeleton/placeholder state */
+.imageSection__img.loading {
+  min-height: 200px;
+  animation: skeleton-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}

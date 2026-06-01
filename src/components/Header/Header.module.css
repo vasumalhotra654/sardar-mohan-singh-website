@@ -1,0 +1,127 @@
+.header {
+  background-color: var(--color-primary);
+  color: var(--color-highlight);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.header__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: 1rem;
+}
+
+.header__brand {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  color: var(--color-highlight);
+  text-decoration: none;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+
+.header__brand:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Desktop nav */
+.header__nav {
+  display: flex;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.header__nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--color-highlight);
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.45rem 0.75rem;
+  border-radius: 2px;
+  transition: background-color 0.15s, color 0.15s;
+  white-space: nowrap;
+}
+
+.header__nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+/* Mobile hamburger button */
+.header__toggle {
+  display: none;
+  background: none;
+  border: 1px solid rgba(211, 219, 117, 0.5);
+  border-radius: 3px;
+  padding: 0.35rem 0.5rem;
+  cursor: pointer;
+  color: var(--color-highlight);
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.header__toggle:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* Mobile dropdown nav */
+.header__mobileNav {
+  display: none;
+  flex-direction: column;
+  background-color: var(--color-primary-dark);
+  border-top: 1px solid rgba(211,219,117,0.2);
+  padding: 0.5rem 0;
+}
+
+.header__mobileNav.open {
+  display: flex;
+}
+
+.header__mobileNav-link {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-highlight);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  transition: background-color 0.15s, color 0.15s;
+}
+
+.header__mobileNav-link:hover {
+  background-color: rgba(255,255,255,0.07);
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 780px) {
+  .header__nav {
+    display: none;
+  }
+  .header__toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 420px) {
+  .header__brand {
+    font-size: 0.82rem;
+    letter-spacing: 0.09em;
+  }
+}
